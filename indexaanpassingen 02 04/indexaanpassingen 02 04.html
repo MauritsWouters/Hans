@@ -10,12 +10,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script>
-      function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
+      function toggleNavigation() {
+        var topnav = document.getElementById("topnav__container");
+        if (topnav.className === "topnav__container") {
+            topnav.className += " topnav__container--shown";
         } else {
-          x.className = "topnav";
+            topnav.className = "topnav__container";
         }
       }
     </script>
@@ -24,14 +24,17 @@
   <body>
     <header class="header">
       <div class="header__center-container center-container">
-        <div class="topnav" id="myTopnav">
-          <a href="#training">TRAINING</a>
-          <a href="#workexperience">WORK EXPERIENCE</a>
-          <a href="#filmscreenings">FILMSCREENING</a>
-          <a href="#additionalskills">ADDITIONAL SKILLS</a>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
+        <div class="topnav">
+            <a href="javascript:void(0);" class="icon" onclick="toggleNavigation()">
+                <!-- TODO: add class fa-md with font-size -->
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul class="topnav__container" id="topnav__container">
+                <li class="topnav__item"><a href="#training">TRAINING</a></li>
+                <li class="topnav__item"><a href="#workexperience">WORK EXPERIENCE</a></li>
+                <li class="topnav__item"><a href="#filmscreenings">FILMSCREENING</a></li>
+                <li class="topnav__item"><a href="#additionalskills">ADDITIONAL SKILLS</a></li>
+            </ul>
         </div>
 
         <div class="header__img-container">
