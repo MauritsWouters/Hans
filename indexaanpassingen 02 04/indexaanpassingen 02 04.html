@@ -13,9 +13,9 @@
       function toggleNavigation() {
         var topnav = document.getElementById("topnav__container");
         if (topnav.className === "topnav__container") {
-            topnav.className += " topnav__container--shown";
+          topnav.className += " topnav__container--shown";
         } else {
-            topnav.className = "topnav__container";
+          topnav.className = "topnav__container";
         }
       }
     </script>
@@ -25,16 +25,26 @@
     <header class="header">
       <div class="header__center-container center-container">
         <div class="topnav">
-            <a href="javascript:void(0);" class="icon" onclick="toggleNavigation()">
-                <!-- TODO: add class fa-md with font-size -->
-                <i class="fa fa-bars"></i>
-            </a>
-            <ul class="topnav__container" id="topnav__container">
-                <li class="topnav__item"><a href="#training">TRAINING</a></li>
-                <li class="topnav__item"><a href="#workexperience">WORK EXPERIENCE</a></li>
-                <li class="topnav__item"><a href="#filmscreenings">FILMSCREENING</a></li>
-                <li class="topnav__item"><a href="#additionalskills">ADDITIONAL SKILLS</a></li>
-            </ul>
+          <a
+            href="javascript:void(0);"
+            class="icon"
+            onclick="toggleNavigation()"
+          >
+            <!-- TODO: add class fa-md with font-size -->
+            <i class="fa fa-bars"></i>
+          </a>
+          <ul class="topnav__container" id="topnav__container">
+            <li class="topnav__item"><a href="#training">TRAINING</a></li>
+            <li class="topnav__item">
+              <a href="#workexperience">WORK EXPERIENCE</a>
+            </li>
+            <li class="topnav__item">
+              <a href="#filmscreenings">FILMSCREENING</a>
+            </li>
+            <li class="topnav__item">
+              <a href="#additionalskills">ADDITIONAL SKILLS</a>
+            </li>
+          </ul>
         </div>
 
         <div class="header__img-container">
@@ -96,7 +106,9 @@
                   </g>
                 </g>
               </svg>
-              <a href="https://www.linkedin.com/in/maurits-wouters/"
+              <a
+                href="https://www.linkedin.com/in/maurits-wouters/"
+                class="contact__item__link"
                 >www.linkedin.com/in/maurits-wouters/</a
               >
             </div>
@@ -114,7 +126,9 @@
                   d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z"
                 />
               </svg>
-              <a href="https://www.vimeo.com/user27958194"
+              <a
+                href="https://www.vimeo.com/user27958194"
+                class="contact__item__link"
                 >www.vimeo.com/user27958194</a
               >
             </div>
@@ -136,13 +150,12 @@
                 />
                 <path d="M0 0h24v24H0z" fill="none" />
               </svg>
-              <input
-                type="button"
-                onclick="window.location.href = 'https://www.google.be/maps/place/Rerum+Novarumlaan+63,+2300+Turnhout/@51.3096425,4.8691839,12.49z/data=!4m5!3m4!1s0x47c6b22728320cb1:0x961cc115b815dd49!8m2!3d51.3254573!4d4.9260849';"
-                value=" Rerum Novarumlaan63,2300 Turnhout"
-                id="button"
-              />
+             
+
+              <a href="https://www.google.be/maps/place/Rerum+Novarumlaan+63,+2300+Turnhout/@51.3096425,4.8691839,12.49z/data=!4m5!3m4!1s0x47c6b22728320cb1:0x961cc115b815dd49!8m2!3d51.3254573!4d4.9260849;" class="contact__item__link"
+                >Rerum Novarumlaan63, 2300 Turnhout</a
             </div>
+          </div>
 
             <div class="contact__item">
               <svg
@@ -157,7 +170,9 @@
                 />
               </svg>
 
-              <a href="tel:+32499308582">+32499308582</a>
+              <a href="tel:+32499308582" class="contact__item__link"
+                >+32499308582</a
+              >
             </div>
 
             <!-- TODO: Use JavaScript Print() -->
@@ -174,14 +189,16 @@
                   d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5v3zm4-3H19v1h1.5V11H19v2h-1.5V7h3v1.5zM9 9.5h1v-1H9v1zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm10 5.5h1v-3h-1v3z"
                 />
               </svg>
-              <a id="download2" href="./img/CV.pdf" download>Download CV</a>
+              <a class="contact__item__link" href="./img/CV.pdf" download
+                >Download CV</a
+              >
             </div>
           </div>
         </section>
 
         <section class="training">
           <div class="trainingParagraafTitel">
-            <h2>training</h2>
+            <h2 id="training">training</h2>
           </div>
           <div class="trainingParagraafTekst">
             <div class="trainingParagraafTekstItem1">
@@ -231,7 +248,7 @@
 
         <div class="work">
           <div class="workParagraafTitel">
-            <h2>work experience</h2>
+            <h2 id="workexperience">work experience</h2>
           </div>
           <div class="workParagraafTekst">
             <div class="workParagraafTekstItem1">
@@ -264,7 +281,7 @@
         <!--screenings-->
         <div class="screenings">
           <div class="screeningsParagraafTitel">
-            <h2>filmscreenings (selection)</h2>
+            <h2 id="filmscreenings">filmscreenings (selection)</h2>
           </div>
           <div class="screeningsParagraafTekst">
             <div class="screeningsParagraafTekstItem1">
@@ -343,17 +360,18 @@
 
         <div class="skills">
           <div class="skillsParagraafTitel">
-            <h2>additional skills</h2>
+            <h2 id="additionalskills">additional skills</h2>
           </div>
 
           <div class="skillsParagraafTekst">
             <div class="skillsParagraafTekstL">
               <ul class=".skillsParagraafTekstL">
-                <li>Driving licence B</li>
-                <li>languages: English - Dutch</li>
-                <li>Networking skills</li>
-                <li>Coaghing skills</li>
-                <li>HTML, Javascript, CSS, Adobe Premiere, Adobe XD</li>
+                <li class="skills_items"
+                >Driving licence B</li>
+                <li class="skills_items">languages: English - Dutch</li>
+                <li class="skills_items">Networking skills</li>
+                <li class="skills_items">Coaghing skills</li>
+                <li class="skills_items">HTML, Javascript, CSS, Adobe Premiere, Adobe XD</li>
               </ul>
             </div>
           </div>
